@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{CD173FEE-034A-4F45-96A1-C1207D11A4C1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="completion_hash.cc" />
+    <ClCompile Include="include\boost_1_59_0\libs\atomic\src\lockpool.cpp" />
+    <ClCompile Include="include\boost_1_59_0\libs\chrono\src\chrono.cpp" />
+    <ClCompile Include="include\boost_1_59_0\libs\system\src\error_code.cpp" />
+    <ClCompile Include="mysql.cc" />
+    <ClCompile Include="readline.cc" />
+    <ClCompile Include="sql_string.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="binary_log_funcs.h" />
+    <ClInclude Include="binary_log_types.h" />
+    <ClInclude Include="client_priv.h" />
+    <ClInclude Include="completion_hash.h" />
+    <ClInclude Include="include2\config.h" />
+    <ClInclude Include="include2\mysqld_ername.h" />
+    <ClInclude Include="include2\mysqld_error.h" />
+    <ClInclude Include="include2\mysql_version.h" />
+    <ClInclude Include="include2\my_config.h" />
+    <ClInclude Include="include2\sql_state.h" />
+    <ClInclude Include="include\atomic\gcc_atomic.h" />
+    <ClInclude Include="include\atomic\gcc_sync.h" />
+    <ClInclude Include="include\atomic\generic-msvc.h" />
+    <ClInclude Include="include\atomic\solaris.h" />
+    <ClInclude Include="include\base64.h" />
+    <ClInclude Include="include\big_endian.h" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\buffer\buffered_piece_collection.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\buffer\buffered_ring.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\buffer\buffer_inserter.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\disjoint\box_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\disjoint\point_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\distance\segment_to_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\expand_by_epsilon.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\is_simple\areal.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\is_simple\linear.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\is_simple\multipoint.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\is_valid\polygon.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\clip_linestring.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\enrich_intersection_points.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\follow_linear_linear.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\get_turns.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\get_turn_info.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\get_turn_info_helpers.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\handle_colocations.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\inconsistent_turns_exception.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\insert_touch_interior_turns.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\intersection_box_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\intersection_insert.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\overlay.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\split_rings.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\traversal_info.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\traverse.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\overlay\turn_info.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\point_is_spike_or_equal.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\relate\areal_areal.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\relate\boundary_checker.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\relate\topology_check.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\relate\turns.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\sections\sectionalize.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\detail\sections\section_functions.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\overlaps.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\algorithms\touches.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\arithmetic\determinant.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\core\exception.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\is_bounding_geometry.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\is_indexable.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\node\node.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\node\node_elements.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\pack_create.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\rstar\insert.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\utilities\are_boxes_ok.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\visitors\children_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\visitors\insert.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\detail\rtree\visitors\remove.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\indexable.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\index\rtree.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\strategies\agnostic\simplify_douglas_peucker.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\strategies\cartesian\box_in_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\strategies\cartesian\point_in_box.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\strategies\transform\inverse_transformer.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\strategies\transform\matrix_transformers.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\util\has_nan_coordinate.hpp" />
+    <ClInclude Include="include\boost_1_59_0\patches\boost\geometry\util\math.hpp" />
+    <ClInclude Include="include\byte_order_generic.h" />
+    <ClInclude Include="include\byte_order_generic_x86.h" />
+    <ClInclude Include="include\crypt_genhash_impl.h" />
+    <ClInclude Include="include\decimal.h" />
+    <ClInclude Include="include\dur_prop.h" />
+    <ClInclude Include="include\errmsg.h" />
+    <ClInclude Include="include\ft_global.h" />
+    <ClInclude Include="include\hash.h" />
+    <ClInclude Include="include\heap.h" />
+    <ClInclude Include="include\instance_callback.h" />
+    <ClInclude Include="include\i_callable.h" />
+    <ClInclude Include="include\keycache.h" />
+    <ClInclude Include="include\lf.h" />
+    <ClInclude Include="include\little_endian.h" />
+    <ClInclude Include="include\mutex_lock.h" />
+    <ClInclude Include="include\myisam.h" />
+    <ClInclude Include="include\myisammrg.h" />
+    <ClInclude Include="include\myisampack.h" />
+    <ClInclude Include="include\mysql.h" />
+    <ClInclude Include="include\mysql\client_authentication.h" />
+    <ClInclude Include="include\mysql\client_plugin.h" />
+    <ClInclude Include="include\mysql\com_data.h" />
+    <ClInclude Include="include\mysql\get_password.h" />
+    <ClInclude Include="include\mysql\group_replication_priv.h" />
+    <ClInclude Include="include\mysql\innodb_priv.h" />
+    <ClInclude Include="include\mysql\mysql_lex_string.h" />
+    <ClInclude Include="include\mysql\plugin.h" />
+    <ClInclude Include="include\mysql\plugin_audit.h" />
+    <ClInclude Include="include\mysql\plugin_auth.h" />
+    <ClInclude Include="include\mysql\plugin_auth_common.h" />
+    <ClInclude Include="include\mysql\plugin_ftparser.h" />
+    <ClInclude Include="include\mysql\plugin_group_replication.h" />
+    <ClInclude Include="include\mysql\plugin_keyring.h" />
+    <ClInclude Include="include\mysql\plugin_trace.h" />
+    <ClInclude Include="include\mysql\plugin_validate_password.h" />
+    <ClInclude Include="include\mysql\psi\mysql_file.h" />
+    <ClInclude Include="include\mysql\psi\mysql_idle.h" />
+    <ClInclude Include="include\mysql\psi\mysql_mdl.h" />
+    <ClInclude Include="include\mysql\psi\mysql_memory.h" />
+    <ClInclude Include="include\mysql\psi\mysql_ps.h" />
+    <ClInclude Include="include\mysql\psi\mysql_socket.h" />
+    <ClInclude Include="include\mysql\psi\mysql_sp.h" />
+    <ClInclude Include="include\mysql\psi\mysql_stage.h" />
+    <ClInclude Include="include\mysql\psi\mysql_statement.h" />
+    <ClInclude Include="include\mysql\psi\mysql_table.h" />
+    <ClInclude Include="include\mysql\psi\mysql_thread.h" />
+    <ClInclude Include="include\mysql\psi\mysql_transaction.h" />
+    <ClInclude Include="include\mysql\psi\psi.h" />
+    <ClInclude Include="include\mysql\psi\psi_abi_v0.h" />
+    <ClInclude Include="include\mysql\psi\psi_abi_v1.h" />
+    <ClInclude Include="include\mysql\psi\psi_abi_v2.h" />
+    <ClInclude Include="include\mysql\psi\psi_base.h" />
+    <ClInclude Include="include\mysql\psi\psi_memory.h" />
+    <ClInclude Include="include\mysql\services.h" />
+    <ClInclude Include="include\mysql\service_command.h" />
+    <ClInclude Include="include\mysql\service_locking.h" />
+    <ClInclude Include="include\mysql\service_mysql_alloc.h" />
+    <ClInclude Include="include\mysql\service_mysql_keyring.h" />
+    <ClInclude Include="include\mysql\service_mysql_password_policy.h" />
+    <ClInclude Include="include\mysql\service_mysql_string.h" />
+    <ClInclude Include="include\mysql\service_my_plugin_log.h" />
+    <ClInclude Include="include\mysql\service_my_snprintf.h" />
+    <ClInclude Include="include\mysql\service_parser.h" />
+    <ClInclude Include="include\mysql\service_rpl_transaction_ctx.h" />
+    <ClInclude Include="include\mysql\service_rpl_transaction_write_set.h" />
+    <ClInclude Include="include\mysql\service_rules_table.h" />
+    <ClInclude Include="include\mysql\service_security_context.h" />
+    <ClInclude Include="include\mysql\service_srv_session.h" />
+    <ClInclude Include="include\mysql\service_srv_session_info.h" />
+    <ClInclude Include="include\mysql\service_ssl_wrapper.h" />
+    <ClInclude Include="include\mysql\service_thd_alloc.h" />
+    <ClInclude Include="include\mysql\service_thd_engine_lock.h" />
+    <ClInclude Include="include\mysql\service_thd_wait.h" />
+    <ClInclude Include="include\mysql\service_thread_scheduler.h" />
+    <ClInclude Include="include\mysql\thread_pool_priv.h" />
+    <ClInclude Include="include\mysql\thread_type.h" />
+    <ClInclude Include="include\mysql_com.h" />
+    <ClInclude Include="include\mysql_com_server.h" />
+    <ClInclude Include="include\mysql_embed.h" />
+    <ClInclude Include="include\mysql_time.h" />
+    <ClInclude Include="include\mysys_err.h" />
+    <ClInclude Include="include\my_aes.h" />
+    <ClInclude Include="include\my_alloc.h" />
+    <ClInclude Include="include\my_atomic.h" />
+    <ClInclude Include="include\my_base.h" />
+    <ClInclude Include="include\my_bit.h" />
+    <ClInclude Include="include\my_bitmap.h" />
+    <ClInclude Include="include\my_byteorder.h" />
+    <ClInclude Include="include\my_check_opt.h" />
+    <ClInclude Include="include\my_command.h" />
+    <ClInclude Include="include\my_compare.h" />
+    <ClInclude Include="include\my_compiler.h" />
+    <ClInclude Include="include\my_dbug.h" />
+    <ClInclude Include="include\my_default.h" />
+    <ClInclude Include="include\my_dir.h" />
+    <ClInclude Include="include\my_getopt.h" />
+    <ClInclude Include="include\my_global.h" />
+    <ClInclude Include="include\my_icp.h" />
+    <ClInclude Include="include\my_list.h" />
+    <ClInclude Include="include\my_md5.h" />
+    <ClInclude Include="include\my_md5_size.h" />
+    <ClInclude Include="include\my_murmur3.h" />
+    <ClInclude Include="include\my_rdtsc.h" />
+    <ClInclude Include="include\my_rnd.h" />
+    <ClInclude Include="include\my_sqlcommand.h" />
+    <ClInclude Include="include\my_stacktrace.h" />
+    <ClInclude Include="include\my_sys.h" />
+    <ClInclude Include="include\my_thread.h" />
+    <ClInclude Include="include\my_thread_local.h" />
+    <ClInclude Include="include\my_thread_os_id.h" />
+    <ClInclude Include="include\my_time.h" />
+    <ClInclude Include="include\my_timer.h" />
+    <ClInclude Include="include\my_tree.h" />
+    <ClInclude Include="include\my_uctype.h" />
+    <ClInclude Include="include\my_user.h" />
+    <ClInclude Include="include\my_xml.h" />
+    <ClInclude Include="include\m_ctype.h" />
+    <ClInclude Include="include\m_string.h" />
+    <ClInclude Include="include\nullable.h" />
+    <ClInclude Include="include\password.h" />
+    <ClInclude Include="include\pfs_file_provider.h" />
+    <ClInclude Include="include\pfs_idle_provider.h" />
+    <ClInclude Include="include\pfs_memory_provider.h" />
+    <ClInclude Include="include\pfs_metadata_provider.h" />
+    <ClInclude Include="include\pfs_socket_provider.h" />
+    <ClInclude Include="include\pfs_stage_provider.h" />
+    <ClInclude Include="include\pfs_statement_provider.h" />
+    <ClInclude Include="include\pfs_table_provider.h" />
+    <ClInclude Include="include\pfs_thread_provider.h" />
+    <ClInclude Include="include\pfs_transaction_provider.h" />
+    <ClInclude Include="include\prealloced_array.h" />
+    <ClInclude Include="include\priority_queue.h" />
+    <ClInclude Include="include\probes_mysql.h" />
+    <ClInclude Include="include\probes_mysql_nodtrace.h" />
+    <ClInclude Include="include\queues.h" />
+    <ClInclude Include="include\service_versions.h" />
+    <ClInclude Include="include\sha1.h" />
+    <ClInclude Include="include\sha2.h" />
+    <ClInclude Include="include\sql_chars.h" />
+    <ClInclude Include="include\sql_common.h" />
+    <ClInclude Include="include\sql_string.h" />
+    <ClInclude Include="include\sslopt-case.h" />
+    <ClInclude Include="include\sslopt-longopts.h" />
+    <ClInclude Include="include\sslopt-vars.h" />
+    <ClInclude Include="include\template_utils.h" />
+    <ClInclude Include="include\thr_cond.h" />
+    <ClInclude Include="include\thr_lock.h" />
+    <ClInclude Include="include\thr_mutex.h" />
+    <ClInclude Include="include\thr_rwlock.h" />
+    <ClInclude Include="include\typelib.h" />
+    <ClInclude Include="include\violite.h" />
+    <ClInclude Include="include\welcome_copyright_notice.h" />
+    <ClInclude Include="mysql_version.h" />
+    <ClInclude Include="my_config.h" />
+    <ClInclude Include="my_default.h" />
+    <ClInclude Include="my_global.h" />
+    <ClInclude Include="my_readline.h" />
+    <ClInclude Include="m_string.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
